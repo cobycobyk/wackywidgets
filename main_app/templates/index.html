@@ -15,7 +15,17 @@
 
   {% else %}
     <h3>No Widgets Exist</h3>
-    <hr>
   {% endif %}
+    <hr>
+  <h4>Add Widget</h4>
+  <form class="pure-form" action="{% url 'create' %}" method="POST">
+    <label>Desciption:</label>
+    <input type="text" name="description">
+    <br>
+    <label>Quantity:</label>
+    <input type="text" name="quantity">
+    <br>
+    <input type="submit" value="ADD WIDGET" class="btn">
+  </form>
 </body>
 </html>
