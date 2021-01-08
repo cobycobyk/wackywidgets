@@ -14,3 +14,7 @@ def create(request):
   )
   new_widget.save()
   return redirect('index')
+
+def delete(request, widget_id):
+  Widget.objects.get(id=widget_id).delete()
+  return redirect('/')
