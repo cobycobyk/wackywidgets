@@ -28,6 +28,11 @@
           <td><a href="{% url 'delete' widget.id %}">X</a></td>
         </tr>
         {% endfor %}
+        <tr style="font-weight: bold;">
+          <td>Total Quantity</td>
+          <td>{{ sum }}</td>
+          <td></td>
+        </tr>
       </tbody>
     </table>
   {% else %}

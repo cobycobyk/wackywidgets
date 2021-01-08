@@ -5,7 +5,10 @@ from .models import Widget
 # Create your views here.
 def index(request):
   widgets = Widget.objects.all()
-  return render(request, 'index.html', {'widgets': widgets})
+  sum = 0
+  for widget in widgets:
+    sum += widget.quantity
+  return render(request, 'index.html', {'widgets': widgets, 'sum': sum})
 
 def create(request):
   new_widget = Widget(
